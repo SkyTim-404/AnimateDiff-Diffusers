@@ -1,0 +1,185 @@
+chillout:
+  repeat: 1 # For random seed
+
+  motion_adapter: guoyww/animatediff-motion-adapter-v1-5-2
+
+  sd_model: runwayml/stable-diffusion-v1-5
+
+  checkpoint: models/Checkpoint/chilloutmix_NiPrunedFp32Fix.safetensors
+
+  lora:
+    - models/LoRA/Elixir.safetensors
+
+  use_lcm: True
+  lcm_path: models/LoRA/pytorch_lora_weights.safetensors
+
+  seed: 
+    - 601806228424823318
+    - 7280264107444231054
+    - 15791025646518257040
+    - 5507363486857296449
+
+  steps: 
+    - 15
+    - 15
+    - 15
+    - 15
+
+  guidance_scale:
+    - 8
+    - 8
+    - 8
+    - 8
+
+  prompt:
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+
+  n_prompt:
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
+
+
+
+abyss:
+  repeat: 1 # For random seed
+
+  motion_adapter: guoyww/animatediff-motion-adapter-v1-5-2
+
+  sd_model: runwayml/stable-diffusion-v1-5
+
+  checkpoint: models/Checkpoint/abyssorangemix3AOM3_aom3a1b.safetensors
+
+  lora:
+    - models/LoRA/Elixir.safetensors
+
+  use_lcm: True
+  lcm_path: models/LoRA/pytorch_lora_weights.safetensors
+
+  seed: 
+    - 601806228424823318
+    - 7280264107444231054
+    - 15791025646518257040
+    - 5507363486857296449
+
+  steps: 
+    - 15
+    - 15
+    - 15
+    - 15
+
+  guidance_scale:
+    - 8
+    - 8
+    - 8
+    - 8
+
+  prompt:
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+
+  n_prompt:
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
+
+
+
+elegent_entropy:
+  repeat: 1 # For random seed
+
+  motion_adapter: guoyww/animatediff-motion-adapter-v1-5-2
+
+  sd_model: runwayml/stable-diffusion-v1-5
+
+  checkpoint: models/Checkpoint/elegantEntropy_v14.safetensors
+
+  lora:
+    - models/LoRA/Elixir.safetensors
+
+  use_lcm: True
+  lcm_path: models/LoRA/pytorch_lora_weights.safetensors
+
+  seed: 
+    - 601806228424823318
+    - 7280264107444231054
+    - 15791025646518257040
+    - 5507363486857296449
+
+  steps: 
+    - 15
+    - 15
+    - 15
+    - 15
+
+  guidance_scale:
+    - 8
+    - 8
+    - 8
+    - 8
+
+  prompt:
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+
+  n_prompt:
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
+
+
+
+cetus:
+  repeat: 1 # For random seed
+
+  motion_adapter: guoyww/animatediff-motion-adapter-v1-5-2
+
+  sd_model: runwayml/stable-diffusion-v1-5
+
+  checkpoint: models/Checkpoint/cetusMix_Whalefall2.safetensors
+
+  lora:
+    - models/LoRA/Elixir.safetensors
+
+  use_lcm: True
+  lcm_path: models/LoRA/pytorch_lora_weights.safetensors
+
+  seed: 
+    - 601806228424823318
+    - 7280264107444231054
+    - 15791025646518257040
+    - 5507363486857296449
+
+  steps: 
+    - 15
+    - 15
+    - 15
+    - 15
+
+  guidance_scale:
+    - 8
+    - 8
+    - 8
+    - 8
+
+  prompt:
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+
+  n_prompt:
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark

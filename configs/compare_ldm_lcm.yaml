@@ -1,0 +1,102 @@
+ldm:
+  repeat: 1 # For random seed
+
+  motion_adapter: guoyww/animatediff-motion-adapter-v1-5-2
+
+  sd_model: runwayml/stable-diffusion-v1-5
+
+  checkpoint: models/Checkpoint/CounterfeitV30.safetensors
+
+  lora:
+    - models/LoRA/Ghibli_v6.safetensors
+    - models/LoRA/add_detail.safetensors
+    - models/LoRA/more_details.safetensors
+    - models/LoRA/howlbgsv3.safetensors
+
+  textual_inversion:
+    - models/Textual_Inversion/EasyNegativeV2.safetensors
+
+  use_lcm: False
+  lcm_path: models/LoRA/pytorch_lora_weights.safetensors
+
+  seed: 
+    - 601806228424823318
+    - 7280264107444231054
+    - 15791025646518257040
+    - 5507363486857296449
+
+  steps: 
+    - 25
+    - 25
+    - 25
+    - 25
+
+  guidance_scale:
+    - 8
+    - 8
+    - 8
+    - 8
+
+  prompt:
+    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor, sunset
+    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor, sunset
+    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor, sunset
+    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor,  sunset
+
+  n_prompt:
+    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
+    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
+    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
+    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
+
+lcm:
+  repeat: 1 # For random seed
+
+  motion_adapter: guoyww/animatediff-motion-adapter-v1-5-2
+
+  sd_model: runwayml/stable-diffusion-v1-5
+
+  checkpoint: models/Checkpoint/CounterfeitV30.safetensors
+
+  lora:
+    - models/LoRA/Ghibli_v6.safetensors
+    - models/LoRA/add_detail.safetensors
+    - models/LoRA/more_details.safetensors
+    - models/LoRA/howlbgsv3.safetensors
+
+  textual_inversion:
+    - models/Textual_Inversion/EasyNegativeV2.safetensors
+
+  use_lcm: True
+  lcm_path: models/LoRA/pytorch_lora_weights.safetensors
+
+  seed: 
+    - 601806228424823318
+    - 7280264107444231054
+    - 15791025646518257040
+    - 5507363486857296449
+
+  steps: 
+    - 4
+    - 8
+    - 12
+    - 16
+
+  guidance_scale:
+    - 8
+    - 8
+    - 8
+    - 8
+
+  prompt:
+    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor, soft lighting, sunset
+    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor, soft lighting, sunset
+    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor, soft lighting, sunset
+    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor, soft lighting, sunset
+
+  n_prompt:
+    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
+    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
+    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
+    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
+

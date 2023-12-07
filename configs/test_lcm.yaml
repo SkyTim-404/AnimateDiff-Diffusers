@@ -1,0 +1,29 @@
+lcm:
+  repeat: 60 # For random seed
+
+  motion_adapter: guoyww/animatediff-motion-adapter-v1-5-2
+
+  sd_model: runwayml/stable-diffusion-v1-5
+
+  checkpoint: models/Checkpoint/realisticVisionV20.safetensors
+
+  lora:
+    - models/LoRA/Elixir.safetensors
+
+  use_lcm: True
+  lcm_path: models/LoRA/pytorch_lora_weights.safetensors
+
+  seed: 
+    - -1
+
+  steps: 
+    - 12
+
+  guidance_scale:
+    - 8
+
+  prompt:
+    - masterpiece, best quality, ultra detailed, hyper realistic, night city, outdoor
+
+  n_prompt:
+    - bad quality, worse quality, normal quality, low res, grayscale, watermark
