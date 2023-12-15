@@ -74,6 +74,8 @@ def main(config_path):
         if use_lcm:
             pipe.scheduler = LCMScheduler.from_config(pipe.scheduler.config)
             pipe.load_lora_weights(lcm_path)
+        else:
+            pipe.scheduler = DPMSolverMultistepScheduler(beta_start=0.00085, beta_end=0.012, beta_schedule="linear")
         
         for l in lora:
             print(f"loading lora weights from {l}")
@@ -84,9 +86,9 @@ def main(config_path):
             pipe.load_textual_inversion(ti)
             
 
-        pipe.enable_attention_slicing()
-        pipe.enable_vae_slicing()
-        pipe.enable_vae_tiling()
+        # pipe.enable_attention_slicing()
+        # pipe.enable_vae_slicing()
+        # pipe.enable_vae_tiling()
         pipe.enable_model_cpu_offload()
         pipe.enable_xformers_memory_efficient_attention()
 
@@ -133,5 +135,5 @@ def main(config_path):
     
     
 if __name__ == "__main__":
-    config_path = "configs/test_elegent.yaml"
+    config_path = "configs/compare_ldm_lcm.yaml"
     main(config_path)

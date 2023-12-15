@@ -1,102 +1,105 @@
-ldm:
-  repeat: 1 # For random seed
+elegent_entropy:
+  repeat: 1
 
   motion_adapter: guoyww/animatediff-motion-adapter-v1-5-2
 
-  sd_model: runwayml/stable-diffusion-v1-5
-
-  checkpoint: models/Checkpoint/CounterfeitV30.safetensors
+  checkpoint: models/Checkpoint/elegantEntropy_v14.safetensors
 
   lora:
-    - models/LoRA/Ghibli_v6.safetensors
-    - models/LoRA/add_detail.safetensors
-    - models/LoRA/more_details.safetensors
     - models/LoRA/howlbgsv3.safetensors
-
-  textual_inversion:
-    - models/Textual_Inversion/EasyNegativeV2.safetensors
-
-  use_lcm: False
-  lcm_path: models/LoRA/pytorch_lora_weights.safetensors
-
-  seed: 
-    - 601806228424823318
-    - 7280264107444231054
-    - 15791025646518257040
-    - 5507363486857296449
-
-  steps: 
-    - 25
-    - 25
-    - 25
-    - 25
-
-  guidance_scale:
-    - 8
-    - 8
-    - 8
-    - 8
-
-  prompt:
-    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor, sunset
-    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor, sunset
-    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor, sunset
-    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor,  sunset
-
-  n_prompt:
-    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
-    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
-    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
-    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
-
-lcm:
-  repeat: 1 # For random seed
-
-  motion_adapter: guoyww/animatediff-motion-adapter-v1-5-2
-
-  sd_model: runwayml/stable-diffusion-v1-5
-
-  checkpoint: models/Checkpoint/CounterfeitV30.safetensors
-
-  lora:
-    - models/LoRA/Ghibli_v6.safetensors
-    - models/LoRA/add_detail.safetensors
-    - models/LoRA/more_details.safetensors
-    - models/LoRA/howlbgsv3.safetensors
-
-  textual_inversion:
-    - models/Textual_Inversion/EasyNegativeV2.safetensors
 
   use_lcm: True
-  lcm_path: models/LoRA/pytorch_lora_weights.safetensors
+  lcm_path: models/LCM/lcm_lora_sd15.safetensors
 
   seed: 
-    - 601806228424823318
-    - 7280264107444231054
-    - 15791025646518257040
-    - 5507363486857296449
+    - 14484454222602975616
+    - 12421128787287197900
+    - 13593047111525764664
+    - 15781466187947001546
+    - 14159052055988402279
+    - 2827759466077747785
+    - 15402198706728908143
+    - 3795803508800883150
+    - 14838879070228371990
 
   steps: 
-    - 4
-    - 8
     - 12
-    - 16
 
   guidance_scale:
-    - 8
-    - 8
-    - 8
-    - 8
+    - 1
 
   prompt:
-    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor, soft lighting, sunset
-    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor, soft lighting, sunset
-    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor, soft lighting, sunset
-    - masterpiece, best quality, shinkai makoto, hyper realistic, flower, grass, old house, outdoor, soft lighting, sunset
+    - extremely intricate, setting sun, close-up, ultra-detailed, best quality, imagination, rough skin, best lighting, cottagebore, professional majestic oil painting by Ed Blinkey, rim light, Vast grassland
+    - hyper-detailed, masterpiece, best quality, high quality, ivy-covered house, mighty oak, random jungle, highly detailed, 
+    - rich colors, intricate, best quality, Masterpiece, capturing every detail of this serene and immersive landscape, Bridges, detailed background, portrait of cowboy
+    - High Detail, scientific discoveries, magical, Panorama, detailed colors, grass, iridescent pond, red sun shines hot, shabby, ink strokes, realistic lighting, flowers on balustrade and plants on terrace floor, rough skin, architectural streets, masterpiece
+    - by Jeremy Mann, professional landscape painting of natures, impression, ultra-HD, tranquil, cyberpunk, warm, beautiful, grass
+    - art by Midjourney and Greg Rutkowski, particles, pixel_art, tree, island sanctuary, magical nocturnal flora and fauna, best quality, highly detailed, 4k textures, best quality
+    - fine art, masterpiece, wide color coverage, architecture, photorealistic, solo, ancient greek god, Cinematic Lighting, trending on CGSociety, sunset, isometric view, elegant, day, flowers, beautiful, magic, high contrast, mountain, realistic
+    - cloudy sky, photo-realistic, cinematic lighting, professional majestic oil painting by Ed Blinkey, outdoors, fantasy, waterfall, snow, color
+    - Elixir, modelshoot style, acrylic on canvas, 4k textures, by shawn coss, with a network of subterranean tunnels carved by ancient inhabitants., landscape, a harbor, soft focus, best quality, hilltop, Snow cover, photorealistic painting art
 
   n_prompt:
-    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
-    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
-    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
-    - EasyNegativeV2, bad quality, worse quality, normal quality, low res, greyscale, monochrome, watermark
+    - watermark, signature, poorly drawn face, worst quality, mutated, Low_picture_anime, extra limbs, glans, lowres, mutation hands, normal quality, cropped, windows, Abnormal hands, close up, thin lines, 3d, greyscale, worst quality, verybadimagenegative_v1.3, acnes, mutilated, malformed hands
+    - signature, error, lowres, ((close up)), mutated hands, (deformed), bad anatomy, looking away, huge eyes, (low quality), nfixer, watermark, worst quality, disfigured, letterbox, (((mutation))), extra legs, duplicate, paintings, sketches, bad hands, extra limbs, deleted, child:1.1, extra digit, tiling, mutation fingers, By bad artist, (worst quality:1.3), dull, 3D face, logo
+    - watermark, amputation, type, ((poorly drawn face)), cloned, twitter username, blurry, monochrome, (mutated hands and fingers:1.4, bad prompt:1.2, worst quality:1.2), too many fingers, ugly, (((deformed))), fused fingers, bad anatomy, text font ui, EasyNegativeV2, cropped, elf, (((mutation))), oversaturated, (worst quality:2), signature, huge eyes, anime, (cgi:0.9), bad feet, ((close up)), Artifacts, wrong anatomy, 3d, nsfw, acnes, fewer digits, deleted, greyscale, (long hair:1.4), extra fingers, (bad anatomy\(finger\)), people, mutated, drawing, gross proportions, missing limb, bad proportions, (EasyNegativeV2:1.2), low quality, (low quality:1.3), cartoon, denim, paintings, borrowedcharacter, (low quality:1.4, low quality:2), By bad artist, woman, photorealistic, ((extra limbs), username:1.1, extra arms:1.2), [out of frame], (((duplicate))), bad art, (people:1.3, ((extra legs))), Multiple people
+    - watermark, signature, ugly, extra arms, neon, cartoon, title, muscular, ((bad anatomy)), nfixer, anime, mutated, tiling, duplicate, DeepNegative, disfigured, (normal quality), skin spots, ((monochrome)), cartoons
+    - signature, [out of frame], (worst quality), watermark, badhandv4, (bokeh), verybadimagenegative_v1.3, bad anatomy, sketches, text, (fused fingers, (missing legs), worst quality:2), futuristic, paintings, polar lowres, extra fingers, ugly, illustration, (rib:1.0), character name, ((disfigured, (extra arms))), logo, type, sketch, blurry, ((missing arms), blurry:2.0), 3d, censored, bad-picture-chill-75v, people, artist name, By bad artist, cloned face, jpeg artifacts, [BadDream], ((deformed)), low quality, malformed limbs, long neck, poorly drawn face, 3d render, error, EasyNegativeV2, normal quality, (too many fingers), poorly drawn hands, (((bad proportions), close up)), old, (By bad artist anime:0.7, less fingers:1.1), cartoon, water mark, grayscale, mountains
+    - watermark, signature, (((disfigured))), blurry, bad proportions, (distorted), mutated hands, crowded, ((missing arms)), acnes, bad_prompt, ((extra limbs)), paintings, Photoshop, worstquality, (mutated hands and fingers:1.4), extra fingers, (bad anatomy, :1.3, worst quality), cartoon, 3d, anime
+    - watermark, signature, blurry, (nipple:1.4), brandnameimitation, Reference sheet, mutated, extra limbs, (disfigured:1.3), amputation, EasyNegativeV2, extra arms, (low quality), Missing Legs, (worst quality:2)
+    - By bad artist, fewer fingers, nsfw, drawing, (EasyNegativeV2:1.0), signature, (low quality, fused fingers), text, mutation, (distorted), person, (lipstick), hazy, deformed, girl, badhandv4, extra limbs, (worst quality:1.2), poorly drawn face, bad art, watermark, EasyNegativeV2
+    - watermark, signature, disfigured, cartoons, poorly drawn hands, (render, bad hands, (deformed)), normal quality, logo, text, (low quality:1.4), low-res, bad feet, (missing fingers), black-white, cartoon, blurry, bad composition, low quality, disgusting
 
+
+
+elegent_entropy1:
+  repeat: 1
+
+  motion_adapter: guoyww/animatediff-motion-adapter-v1-5-2
+
+  checkpoint: models/Checkpoint/elegantEntropy_v14.safetensors
+
+  lora:
+    - models/LoRA/howlbgsv3.safetensors
+
+  use_lcm: True
+  lcm_path: models/LCM/lcm_lora_sd15.safetensors
+
+  seed: 
+    - 14484454222602975616
+    - 12421128787287197900
+    - 13593047111525764664
+    - 15781466187947001546
+    - 14159052055988402279
+    - 2827759466077747785
+    - 15402198706728908143
+    - 3795803508800883150
+    - 14838879070228371990
+
+  steps: 
+    - 25
+
+  guidance_scale:
+    - 1
+
+  prompt:
+    - extremely intricate, setting sun, close-up, ultra-detailed, best quality, imagination, rough skin, best lighting, cottagebore, professional majestic oil painting by Ed Blinkey, rim light, Vast grassland
+    - hyper-detailed, masterpiece, best quality, high quality, ivy-covered house, mighty oak, random jungle, highly detailed, 
+    - rich colors, intricate, best quality, Masterpiece, capturing every detail of this serene and immersive landscape, Bridges, detailed background, portrait of cowboy
+    - High Detail, scientific discoveries, magical, Panorama, detailed colors, grass, iridescent pond, red sun shines hot, shabby, ink strokes, realistic lighting, flowers on balustrade and plants on terrace floor, rough skin, architectural streets, masterpiece
+    - by Jeremy Mann, professional landscape painting of natures, impression, ultra-HD, tranquil, cyberpunk, warm, beautiful, grass
+    - art by Midjourney and Greg Rutkowski, particles, pixel_art, tree, island sanctuary, magical nocturnal flora and fauna, best quality, highly detailed, 4k textures, best quality
+    - fine art, masterpiece, wide color coverage, architecture, photorealistic, solo, ancient greek god, Cinematic Lighting, trending on CGSociety, sunset, isometric view, elegant, day, flowers, beautiful, magic, high contrast, mountain, realistic
+    - cloudy sky, photo-realistic, cinematic lighting, professional majestic oil painting by Ed Blinkey, outdoors, fantasy, waterfall, snow, color
+    - Elixir, modelshoot style, acrylic on canvas, 4k textures, by shawn coss, with a network of subterranean tunnels carved by ancient inhabitants., landscape, a harbor, soft focus, best quality, hilltop, Snow cover, photorealistic painting art
+
+  n_prompt:
+    - watermark, signature, poorly drawn face, worst quality, mutated, Low_picture_anime, extra limbs, glans, lowres, mutation hands, normal quality, cropped, windows, Abnormal hands, close up, thin lines, 3d, greyscale, worst quality, verybadimagenegative_v1.3, acnes, mutilated, malformed hands
+    - signature, error, lowres, ((close up)), mutated hands, (deformed), bad anatomy, looking away, huge eyes, (low quality), nfixer, watermark, worst quality, disfigured, letterbox, (((mutation))), extra legs, duplicate, paintings, sketches, bad hands, extra limbs, deleted, child:1.1, extra digit, tiling, mutation fingers, By bad artist, (worst quality:1.3), dull, 3D face, logo
+    - watermark, amputation, type, ((poorly drawn face)), cloned, twitter username, blurry, monochrome, (mutated hands and fingers:1.4, bad prompt:1.2, worst quality:1.2), too many fingers, ugly, (((deformed))), fused fingers, bad anatomy, text font ui, EasyNegativeV2, cropped, elf, (((mutation))), oversaturated, (worst quality:2), signature, huge eyes, anime, (cgi:0.9), bad feet, ((close up)), Artifacts, wrong anatomy, 3d, nsfw, acnes, fewer digits, deleted, greyscale, (long hair:1.4), extra fingers, (bad anatomy\(finger\)), people, mutated, drawing, gross proportions, missing limb, bad proportions, (EasyNegativeV2:1.2), low quality, (low quality:1.3), cartoon, denim, paintings, borrowedcharacter, (low quality:1.4, low quality:2), By bad artist, woman, photorealistic, ((extra limbs), username:1.1, extra arms:1.2), [out of frame], (((duplicate))), bad art, (people:1.3, ((extra legs))), Multiple people
+    - watermark, signature, ugly, extra arms, neon, cartoon, title, muscular, ((bad anatomy)), nfixer, anime, mutated, tiling, duplicate, DeepNegative, disfigured, (normal quality), skin spots, ((monochrome)), cartoons
+    - signature, [out of frame], (worst quality), watermark, badhandv4, (bokeh), verybadimagenegative_v1.3, bad anatomy, sketches, text, (fused fingers, (missing legs), worst quality:2), futuristic, paintings, polar lowres, extra fingers, ugly, illustration, (rib:1.0), character name, ((disfigured, (extra arms))), logo, type, sketch, blurry, ((missing arms), blurry:2.0), 3d, censored, bad-picture-chill-75v, people, artist name, By bad artist, cloned face, jpeg artifacts, [BadDream], ((deformed)), low quality, malformed limbs, long neck, poorly drawn face, 3d render, error, EasyNegativeV2, normal quality, (too many fingers), poorly drawn hands, (((bad proportions), close up)), old, (By bad artist anime:0.7, less fingers:1.1), cartoon, water mark, grayscale, mountains
+    - watermark, signature, (((disfigured))), blurry, bad proportions, (distorted), mutated hands, crowded, ((missing arms)), acnes, bad_prompt, ((extra limbs)), paintings, Photoshop, worstquality, (mutated hands and fingers:1.4), extra fingers, (bad anatomy, :1.3, worst quality), cartoon, 3d, anime
+    - watermark, signature, blurry, (nipple:1.4), brandnameimitation, Reference sheet, mutated, extra limbs, (disfigured:1.3), amputation, EasyNegativeV2, extra arms, (low quality), Missing Legs, (worst quality:2)
+    - By bad artist, fewer fingers, nsfw, drawing, (EasyNegativeV2:1.0), signature, (low quality, fused fingers), text, mutation, (distorted), person, (lipstick), hazy, deformed, girl, badhandv4, extra limbs, (worst quality:1.2), poorly drawn face, bad art, watermark, EasyNegativeV2
+    - watermark, signature, disfigured, cartoons, poorly drawn hands, (render, bad hands, (deformed)), normal quality, logo, text, (low quality:1.4), low-res, bad feet, (missing fingers), black-white, cartoon, blurry, bad composition, low quality, disgusting
